@@ -10,21 +10,13 @@ Public Class DBConnection
     Public command As SqlCommand
 
     Public Sub open()
-        If verificaPC() = "Andre-PC" Then
-            'André Ciomini
-            Me.connectionString = "Server=Andre-PC\sql2014; Database=CCBANCO; User Id=sa; Password=andre;"
+        If verificaPC() = "*****-PC" Then
+            Me.connectionString = "Server=******-PC\sql2014; Database=CCBANCO; User Id=sa; Password=**********;"
             Me.connection = New SqlConnection(Me.connectionString)
             Me.connection.Open()
 
-        ElseIf verificaPC() = "ALCS-NOTE" Then
-            'André Canuto
-            Me.connectionString = "Data Source=ALCS-NOTE\SQL2014;Initial Catalog=Console;User ID=sa;Password=1983"
-            Me.connection = New SqlConnection(Me.connectionString)
-            Me.connection.Open()
-
-        ElseIf verificaPC() = "THIAGO_ULTRA" Then
-            'Thiago Gimenes
-            Me.connectionString = "colocar a string aqui"
+        ElseIf verificaPC() = "******-NOTE" Then            
+            Me.connectionString = "Data Source=*****-NOTE\SQL2014;Initial Catalog=Console;User ID=sa;Password=********"
             Me.connection = New SqlConnection(Me.connectionString)
             Me.connection.Open()
         Else
